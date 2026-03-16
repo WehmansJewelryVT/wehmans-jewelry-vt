@@ -1,1 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --gold: #b89552;
+            --slate: #1a1a1a;
+            --white: #ffffff;
+            --light-grey: #f4f4f4;
+        }
 
+        /* The Launcher Button */
+        #chat-launcher {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--slate);
+            color: var(--gold);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            font-size: 1.5rem;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        #chat-launcher:hover { transform: scale(1.1); }
+
+        /* The Chat Window */
+        #chat-window {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 350px;
+            height: 500px;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            display: none; /* Hidden by default */
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 1000;
+            font-family: 'Garamond', serif;
+            border: 1px solid #eee;
+        }
+
+        /* Chat Header */
+        .chat-header {
+            background: var(--slate);
+            color: var(--white);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .chat-header h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .online-dot {
+            width: 8px;
+            height: 8px;
+            background: #4caf50;
+            border-radius: 50%;
+        }
+
+        /* Message Area */
+        #chat-body {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background: var(--light-grey);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .message {
+            max-width: 80%;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .ai-message {
+            background: var(--white);
+            align-self: flex-start;
+            border-bottom-left-radius: 0;
+            border: 1px solid #ddd;
+        }
+
+        .user-message {
+            background: var(--gold);
+            color: var(--white);
+            align-self: flex-end;
+            border-bottom-right-radius: 0;
+        }
+
+        .charity-note {
+            font-size: 0.75rem;
+            text-align: center;
+            color: #888;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        /* Chat Input */
+        .chat-footer {
+            padding: 15px;
+            display: flex;
+            gap: 10px;
+            border-top: 1px solid #eee;
+        }
+
+        .chat-footer input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .chat-footer button {
+            background: var(--slate);
+            color: var(--gold);
+            border: none;
+            padding: 0 15px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="chat-launcher" onclick="toggleChat()">✨</div>
+
+<div id="chat-window">
+    <div class="chat-header">
+        <div class="online-dot"></div>
+        <div>
+            <h3>Wehman's Assistant</h3>
+            <span style="font-size: 0.7rem; color: var(--gold);">AI Boutique Concierge</span>
+        </div>
+    </div>
+
+    <div id="chat-body">
+        <div class="message ai-message">
+            Hello! I'm your Wehman's guide. How can I help you find the perfect piece or tell you more about our 15% mission today?
+        </div>
+    </div>
+
+    <div class="charity-note">Every chat leads to more impact.</div>
+
+    <div class="chat-footer">
+        <input type="text" id="userInput" placeholder="Ask a question..." onkeypress="handleKey(event)">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<script>
+    function toggleChat() {
+        const win = document.getElementById('chat-window');
+        win.style.display = (win.style.display === 'flex') ? 'none' : 'flex';
+    }
+
+    function handleKey(e) {
+        if (e.key === 'Enter') sendMessage();
+    }
+
+    function sendMessage() {
+        const input = document.getElementById('userInput');
+        const body = document.getElementById('chat-body');
+        
+        if (input.value.trim() === "") return;
+
+        // User Message
+        const userDiv = document.createElement('div');
+        userDiv.className = 'message user-message';
+        userDiv.textContent = input.value;
+        body.appendChild(userDiv);
+
+        const query = input.value.toLowerCase();
+        input.value = "";
+
+        // Simulated AI Response Logic
+        setTimeout(() => {
+            const aiDiv = document.createElement('div');
+            aiDiv.className = 'message ai-message';
+            
+            if (query.includes('charity') || query.includes('give') || query.includes('profit')) {
+                aiDiv.textContent = "Great question! Wehman's gives 15% of all profits to local homelessness and food security programs. Your purchase directly helps our neighbors shine!";
+            } else if (query.includes('gold') || query.includes('material')) {
+                aiDiv.textContent = "We use ethically sourced metals, including 14k gold and recycled sterling silver. Our ethical sourcing page has all the details!";
+            } else if (query.includes('shipping')) {
+                aiDiv.textContent = "We offer complimentary shipping on all orders over $100!";
+            } else {
+                aiDiv.textContent = "That's a wonderful question. I'm still learning, but I can certainly help you browse our collections or connect you with a human expert!";
+            }
+            
+            body.appendChild(aiDiv);
+            body.scrollTop = body.scrollHeight; // Auto-scroll
+        }, 800);
+    }
+</script>
+
+</body>
+</html>
