@@ -1,1 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary-gold: #c5a059;
+            --dark-charcoal: #2d2d2d;
+            --soft-cream: #fdfbf8;
+            --border-color: #e0e0e0;
+        }
 
+        body {
+            background-color: #f4f4f4;
+            font-family: 'Garamond', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .signup-card {
+            background: var(--soft-cream);
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 450px;
+            width: 90%;
+            border-top: 5px solid var(--primary-gold);
+        }
+
+        .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--dark-charcoal);
+            text-align: center;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+        }
+
+        .tagline {
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: var(--dark-charcoal);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 2px;
+            box-sizing: border-box;
+            font-size: 1rem;
+            background: #fff;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--primary-gold);
+        }
+
+        .charity-note {
+            background: #fff;
+            border: 1px dashed var(--primary-gold);
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 0.85rem;
+            color: #444;
+            line-height: 1.4;
+        }
+
+        button {
+            width: 100%;
+            background-color: var(--dark-charcoal);
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 2px;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: var(--primary-gold);
+        }
+
+        .footer-text {
+            text-align: center;
+            font-size: 0.75rem;
+            color: #999;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="signup-card">
+    <div class="brand-name">Wehman's Jewelry LLC</div>
+    <div class="tagline">Beauty that shines, heart that gives.</div>
+
+    <form action="#" method="POST">
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="E.g. Jane Doe" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="janedoe@example.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="interest">Interested In</label>
+            <select id="interest" name="interest">
+                <option value="everyday">Everyday Essentials</option>
+                <option value="luxury">Luxury & Heirlooms</option>
+                <option value="custom">Custom Designs</option>
+                <option value="charity">Community & Impact Updates</option>
+            </select>
+        </div>
+
+        <div class="charity-note">
+            <strong>The Wehman Promise:</strong> By joining us, you’re part of a community that gives back. 
+          Remember, 15% of all our profits go directly to fighting local homelessness and poverty.
+        </div>
+
+        <button type="submit">JOIN THE CIRCLE</button>
+    </form>
+
+    <div class="footer-text">
+        We value your privacy. Unsubscribe at any time.
+    </div>
+</div>
+
+</body>
+</html>
