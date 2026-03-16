@@ -1,1 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Team | Wehman’s Jewelry VT</title>
+    <style>
+        :root {
+            --gold: #d4af37;
+            --charcoal: #2c2c2c;
+            --light-bg: #fdfdfd;
+            --border: #e1e1e1;
+        }
 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: var(--charcoal);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .app-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-top: 5px solid var(--gold);
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            color: var(--charcoal);
+            margin-top: 0;
+        }
+
+        p.intro {
+            margin-bottom: 30px;
+            color: #666;
+        }
+
+        .form-section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .form-section h3 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="url"],
+        select,
+        textarea {
+            padding: 12px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font-size: 1rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        .full-width {
+            grid-column: span 2;
+        }
+
+        .submit-btn {
+            background-color: var(--gold);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #b8962d;
+        }
+
+        @media (max-width: 600px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            .full-width {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="app-container">
+    <h1>Join the Wehman’s Jewelry Team</h1>
+    <p class="intro">Interested in applying for a job at Wehman's Jewelry LLC?  We are looking for jewelers with experience who strive to 
+      work hard, get things accomplished, and help others with any upcoming issues.  We are also looking for people who are ok with helping
+    the local community even if it's not your own donation.</p>
+
+    <form action="#" method="POST">
+        
+        <div class="form-section">
+            <h3>Personal Information</h3>
+            <div class="grid">
+                <div class="field">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="fname" required>
+                </div>
+                <div class="field">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lname" required>
+                </div>
+                <div class="field">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="field">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(802) 000-0000">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h3>Position & Experience</h3>
+            <div class="grid">
+                <div class="field">
+                    <label for="position">Desired Position</label>
+                    <select id="position" name="position">
+                        <option value="sales">Sales Associate</option>
+                        <option value="bench">Bench Jeweler / Repairs</option>
+                        <option value="design">Custom Jewelry Designer</option>
+                        <option value="admin">Administrative / Operations</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="availability">Earliest Start Date</label>
+                    <input type="text" id="availability" name="availability" placeholder="MM/DD/YYYY">
+                </div>
+                <div class="field full-width">
+                    <label for="resume">Link to Portfolio or Digital Resume (URL)</label>
+                    <input type="url" id="resume" name="resume" placeholder="https://linkedin.com/in/yourprofile">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h3>Why Wehman's Jewelry VT?</h3>
+            <div class="field full-width">
+                <label for="mission">Our mission involves donating a portion of profits to local charity and keeping jewelry affordable. 
+                  Why does this resonate with you?</label>
+                <textarea id="mission" name="mission" rows="4" placeholder="Tell us about your community spirit..."></textarea>
+            </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Application</button>
+    </form>
+</div>
+
+</body>
+</html>
