@@ -1,1 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --earth-green: #3a473e;
+            --muted-gold: #c5a059;
+            --soft-ivory: #faf8f5;
+            --deep-slate: #2d2d2d;
+            --warm-grey: #757575;
+        }
 
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
+            color: var(--deep-slate);
+            background-color: var(--soft-ivory);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .hero-section {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .hero-section h1 {
+            font-size: 2.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: var(--earth-green);
+        }
+
+        .hero-section p {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--warm-grey);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .pillar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .pillar-card {
+            background: white;
+            padding: 40px;
+            border-bottom: 3px solid var(--muted-gold);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: transform 0.3s ease;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .pillar-card h2 {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--muted-gold);
+            margin-top: 0;
+        }
+
+        .pillar-card p {
+            font-size: 0.95rem;
+            color: #555;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        .impact-callout {
+            background: var(--earth-green);
+            color: white;
+            padding: 50px;
+            text-align: center;
+            border-radius: 2px;
+            margin-top: 40px;
+        }
+
+        .impact-callout h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .impact-callout p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 25px;
+            opacity: 0.9;
+        }
+
+        .stat-circle {
+            display: inline-block;
+            border: 2px solid var(--muted-gold);
+            color: var(--muted-gold);
+            width: 120px;
+            height: 120px;
+            line-height: 120px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .footer-tagline {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--warm-grey);
+        }
+
+        @media (max-width: 600px) {
+            .hero-section h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header class="hero-section">
+        <h1>Beauty Without Compromise</h1>
+        <p>At Wehman’s Jewelry, we believe that the story behind your jewelry should be just as beautiful as the piece itself.</p>
+    </header>
+
+    <div class="pillar-grid">
+        <div class="pillar-card">
+            <h2>Conflict-Free Diamonds and Gemstones</h2>
+            <p>Every diamond and gemstone in our collection is sourced through the Kimberley Process and other legitimately recognized
+              channels. We ensure our supply chain is free from the human cost often associated with jewelry.</p>
+        </div>
+
+        <div class="pillar-card">
+            <h2>Recycled Metals</h2>
+            <p>To reduce our environmental footprint, 50% of our common jewelry is crafted from certified recycled gold and
+              silver, preventing unnecessary mining and waste.</p>
+        </div>
+
+        <div class="pillar-card">
+            <h2>Fair Labor</h2>
+            <p>We work exclusively with workshops that provide living wages, safe conditions, and health benefits to the artisans 
+              who bring our designs to life.</p>
+        </div>
+    </div>
+
+    <section class="impact-callout">
+        <div class="stat-circle">15%</div>
+        <h2>The Final Link</h2>
+        <p>Our ethics don't stop at the workbench. For every piece sold, we return 15% of our profits to our neighbors facing homelessness, 
+          food insecurity, and poverty.</p>
+        <p style="font-size: 0.9rem; font-style: italic;">"True luxury is knowing your sparkle helps someone else shine."</p>
+    </section>
+
+    <div class="footer-tagline">Wehman's Jewelry LLC</div>
+</div>
+
+</body>
+</html>
