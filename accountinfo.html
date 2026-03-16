@@ -1,1 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --gold: #b89552;
+            --charcoal: #2d2d2d;
+            --soft-tan: #f9f6f2;
+            --white: #ffffff;
+            --border: #e8e1d9;
+        }
 
+        body {
+            font-family: 'Georgia', serif;
+            background-color: var(--soft-tan);
+            color: var(--charcoal);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .account-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 30px;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            background: var(--white);
+            padding: 25px;
+            border: 1px solid var(--border);
+            height: fit-content;
+        }
+
+        .sidebar h2 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 10px;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 12px 0;
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        /* Main Content Area */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 30px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+        }
+
+        /* Impact Dashboard */
+        .impact-banner {
+            background: var(--charcoal);
+            color: var(--white);
+            padding: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 4px;
+        }
+
+        .impact-stat h3 {
+            margin: 0;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+
+        .impact-stat p {
+            margin: 5px 0 0 0;
+            font-size: 1.8rem;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th {
+            text-align: left;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: #888;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        td {
+            padding: 15px 0;
+            border-bottom: 1px solid #f9f9f9;
+            font-family: 'Helvetica', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .status-badge {
+            background: #e9f5ee;
+            color: #2d6a4f;
+            padding: 4px 8px;
+            font-size: 0.75rem;
+            border-radius: 12px;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 8px 15px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: all 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: var(--gold);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .account-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="account-container">
+    <aside class="sidebar">
+        <h2>My Account</h2>
+        <nav>
+            <a href="dashboard.html" class="nav-link active">Dashboard</a>
+            <a href="orderhistory.html" class="nav-link">Order History</a>
+            <a href="favorites.html" class="nav-link">Wishlist</a>
+            <a href="givingprofile.html" class="nav-link">Giving Profile</a>
+            <a href="accountsettings.html" class="nav-link">Account Settings</a>
+            <a href="logout.html" class="nav-link" style="margin-top: 20px; color: #cc0000;">Logout</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        
+        <div class="impact-banner">
+            <div class="impact-stat">
+                <h3>Your Community Impact</h3>
+                <p>Helping Local Families and Communities</p>
+            </div>
+            <div class="impact-stat" style="text-align: right;">
+                <h3>Total Donated via Your Purchases</h3>
+                <p>$142.50</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 style="margin-top:0;">Recent Orders</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order #</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Total</th>
+                        <th></th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>Shipping Address</h2>
+            <p style="font-family: sans-serif; line-height: 1.6; color: #555;">
+                <strong>Jane Doe</strong><br>
+                123 Abc Rd<br>
+                Wehman, NY<br>
+                <a href="editaddress.html" style="color: var(--gold); font-size: 0.9rem;">Edit Address</a>
+            </p>
+        </div>
+
+    </main>
+</div>
+
+</body>
+</html>
