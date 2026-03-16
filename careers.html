@@ -1,1 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | Wehman’s Jewelry VT</title>
+    <style>
+        :root {
+            --gold: #d4af37;
+            --charcoal: #2c2c2c;
+            --white: #ffffff;
+            --cream: #f9f9f9;
+        }
 
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--charcoal);
+        }
+
+        /* Hero Section */
+        .careers-hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1584305323473-d3b5a97e54f1?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .careers-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .careers-hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+        }
+
+        /* Culture Section */
+        .culture-section {
+            padding: 80px 10%;
+            text-align: center;
+            background-color: var(--white);
+        }
+
+        .culture-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .culture-item h3 {
+            color: var(--gold);
+            font-size: 1.5rem;
+        }
+
+        /* Openings Section */
+        .openings-section {
+            padding: 80px 10%;
+            background-color: var(--cream);
+        }
+
+        .job-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+
+        .job-card:hover {
+            transform: scale(1.01);
+        }
+
+        .job-info h3 {
+            margin: 0;
+            color: var(--charcoal);
+        }
+
+        .job-info p {
+            margin: 5px 0 0;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        .apply-btn {
+            background-color: var(--gold);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .apply-btn:hover {
+            background-color: #b8962d;
+        }
+
+        footer {
+            background: var(--charcoal);
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .job-card {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="careers-hero">
+        <h1>Work With Purpose</h1>
+        <p>Help us create beautiful things and support the Burlington community.</p>
+    </header>
+
+    <section class="culture-section">
+        <h2>Why Join Wehman's Jewelry VT?</h2>
+        <p>We are more than just a jewelry store. We are a mission-driven team dedicated to local impact.</p>
+        
+        <div class="culture-grid">
+            <div class="culture-item">
+                <h3>Community First</h3>
+                <p>A portion of our profits goes directly to local Burlington charities. When you work here, you're helping your neighbors.</p>
+            </div>
+            <div class="culture-item">
+                <h3>Craftsmanship</h3>
+                <p>We value the art of jewelry making. We provide a space where skill and creativity are celebrated every day.</p>
+            </div>
+            <div class="culture-item">
+                <h3>Inclusive Luxury</h3>
+                <p>We believe beauty should be accessible. We pride ourselves on reasonable pricing and a welcoming atmosphere for all.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="openings-section">
+        <h2 style="text-align: center; margin-bottom: 40px;">Current Openings</h2>
+        
+        <div class="job-card">
+            <div class="job-info">
+                <h3>Showroom Sales Consultant</h3>
+                <p>Full-Time • Burlington, VT</p>
+            </div>
+            <a href="apply.html" class="apply-btn">Apply Now</a>
+        </div>
+
+        <div class="job-card">
+            <div class="job-info">
+                <h3>Apprentice Bench Jeweler</h3>
+                <p>Part-Time / Full-Time • Burlington, VT</p>
+            </div>
+            <a href="apply.html" class="apply-btn">Apply Now</a>
+        </div>
+
+        <div class="job-card">
+            <div class="job-info">
+                <h3>Community Outreach Coordinator</h3>
+                <p>Part-Time • Burlington, VT</p>
+            </div>
+            <a href="apply.html" class="apply-btn">Apply Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Wehman’s Jewelry VT. Dedicated to our community.</p>
+    </footer>
+
+</body>
+</html>
