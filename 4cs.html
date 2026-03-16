@@ -1,1 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding the 4 C’s | Wehman’s Jewelry LLC</title>
+    <style>
+        :root {
+            --gold: #d4af37;
+            --charcoal: #2c2c2c;
+            --white: #ffffff;
+            --cream: #f9f9f9;
+            --soft-gray: #f4f4f4;
+        }
 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--charcoal);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--charcoal);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: var(--gold);
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .c-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .c-section:nth-child(even) {
+            direction: rtl;
+        }
+
+        .c-section:nth-child(even) .text-box {
+            direction: ltr;
+        }
+
+        .text-box h2 {
+            color: var(--gold);
+            font-size: 2rem;
+            margin-top: 0;
+        }
+
+        .visual-placeholder {
+            background-color: var(--soft-gray);
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            border: 1px dashed #ccc;
+        }
+
+        .transparency-note {
+            background-color: var(--cream);
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+            border-left: 5px solid var(--gold);
+            margin-top: 40px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: var(--soft-gray);
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .c-section {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .c-section:nth-child(even) {
+                direction: ltr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>The 4 C’s of Diamonds and Other Gemstones and why They are Important</h1>
+        <p>A Guide to Quality and Value</p>
+    </header>
+
+    <div class="container">
+        <p class="intro">
+            At Wehman’s Jewelry LLC, we believe an informed customer is a happy one. 
+          Whether you are looking for a diamond or a precious gemstone, understanding these four factors will help you find the perfect 
+          balance of beauty and value.</p>
+
+        <section class="c-section">
+            <div class="text-box">
+                <h2>1.) Cut</h2>
+                <p>The cut isn't about the shape, but how well a diamond or gemstone's facets interact with light. A well-cut gemstone 
+                  reflects light internally from one facet to another and disperses it through the top.  Although when it does come down to
+                the cut for precious gemstones, cabochons are typically worth half as much as say a gemstone that was brilliant round or facet 
+                  cut.</p>
+                <p><strong>Why it matters:</strong> Cut is the first of the four C's because it determines the sparkle and "fire" of the stone, but doesn't 
+                  always justify price.</p>
+            </div>
+            <div class="visual-placeholder">
+                
+            </div>
+        </section>
+
+        <section class="c-section">
+            <div class="text-box">
+                <h2>2. Color</h2>
+                <p>For white diamonds, the "Color" grade actually refers to the lack of color. The GIA scale ranges from D (colorless) to Z 
+                  (light yellow or brown).</p>
+                <p><strong>Pro Tip:</strong> Many "near-colorless" stones (G-J) look colorless to the naked eye but offer much better value, 
+                  allowing you to invest more in the Cut.</p>
+              
+              <p>For other precious gemstones, they are graded on a universal color scale also known as the "Color Intensity Scale".  This scale
+              ranges from light to dark.  A light color intensity means that the gemstone appears very light in color and almost pale.  A 
+              medium-light color intensity means the gemstone appears kind of pale but overall still has a little bit of saturation.  A medium
+              color intensity means the gemstone appears kind of pale but also kind of saturated.  An intense color intensity means that the 
+              gemstone appears saturated but also a little pale.  A vivid color intensity is the most desirable color intensity as it's known
+              for very rare varities like pigeon blood ruby, royal blue sapphire, and vivid green emerald, amongst others.  A vivid color 
+              intensity is defined as being very saturated but not too saturated to where it looks almost black.  Finally, a dark color intensity 
+              means a gemstone that appears very saturated or dark in color almost appearing blackish blue common blue sapphires or dark blackish red
+              for rubies.  This is what the color factor means and it's much more important in determining value than cut is.</p>
+              
+              <p>But, that's not all.</p>
+            </div>
+            <div class="visual-placeholder">
+                
+            </div>
+        </section>
+
+        <section class="c-section">
+            <div class="text-box">
+                <h2>3. Clarity</h2>
+                <p>Clarity measures the number, size, and placement of internal characteristics called "inclusions" and external marks called "blemishes."</p>
+                <p><strong>Our Philosophy:</strong> We focus on "eye-clean" stones—pieces that may have small inclusions under a microscope but look flawless to you and your loved ones.</p>
+            </div>
+            <div class="visual-placeholder">
+                
+            </div>
+        </section>
+
+        <section class="c-section">
+            <div class="text-box">
+                <h2>4. Carat Weight</h2>
+                <p>Carat refers to the physical weight of the diamond, not its size. Two diamonds of equal carat weight can have very different values depending on the other three C's.</p>
+                <p><strong>The Wehman Way:</strong> We help you find the "sweet spot" where the stone looks impressive and fits your budget perfectly.</p>
+            </div>
+            <div class="visual-placeholder">
+                
+
+[Image of diamond carat size comparison chart]
+
+            </div>
+        </section>
+
+        <div class="transparency-note">
+            <h3>Our Commitment to Transparency</h3>
+            <p>Because we operate with the dream of helping our Burlington community, we don't hide behind jargon. We will show you exactly 
+              why a stone is priced the way it is and help you pick the best quality for your reasonable price point.</p>
+            <a href="contact.html" style="color: var(--gold); font-weight: bold; text-decoration: none;">Book a consultation to see these 
+              differences in person.</a>
+        </div>
+    </div>
+
+    <footer>
+        2026 Wehman’s Jewelry LLC | Burlington's Community Jeweler
+    </footer>
+
+</body>
+</html>
