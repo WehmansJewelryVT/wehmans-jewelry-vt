@@ -1,1 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Directory | Wehman’s Jewelry LLC</title>
+    <style>
+        :root {
+            --gold: #d4af37;
+            --charcoal: #2c2c2c;
+            --white: #ffffff;
+            --cream: #f9f9f9;
+            --gray: #666;
+        }
 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--white);
+            color: var(--charcoal);
+        }
+
+        .header-simple {
+            padding: 40px 10%;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .header-simple h1 {
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+
+        .directory-container {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .directory-group h2 {
+            font-size: 1.2rem;
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            color: var(--charcoal);
+        }
+
+        .directory-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .directory-list li {
+            margin-bottom: 12px;
+        }
+
+        .directory-list a {
+            text-decoration: none;
+            color: var(--gray);
+            transition: color 0.3s;
+            font-size: 1rem;
+        }
+
+        .directory-list a:hover {
+            color: var(--gold);
+            text-decoration: underline;
+        }
+
+        .community-callout {
+            grid-column: 1 / -1;
+            background-color: var(--cream);
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .community-callout h3 {
+            margin-top: 0;
+            color: var(--gold);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.9rem;
+            color: #999;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header-simple">
+        <h1>Wehman’s Jewelry VT</h1>
+        <p>Site Directory & Resources</p>
+    </header>
+
+    <main class="directory-container">
+        
+        <div class="directory-group">
+            <h2>Our Jewelry</h2>
+            <ul class="directory-list">
+                <li><a href="index.html">Homepage</a></li>
+                <li><a href="collections.html">Fine Collections</a></li>
+                <li><a href="customjewelry.html">Custom Design Studio</a></li>
+                <li><a href="repairs.html">Repair Services</a></li>
+                <li><a href="appraisals.html">Professional Appraisals</a></li>
+            </ul>
+        </div>
+
+        <div class="directory-group">
+            <h2>The Mission</h2>
+            <ul class="directory-list">
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="ourmission.html">Our Mission</a></li>
+                <li><a href="jewelrypricematching.html">Pricing Transparency</a></li>
+                <li><a href="blog.html">Our Blog</a></li>
+            </ul>
+        </div>
+
+        <div class="directory-group">
+            <h2>Get Involved</h2>
+            <ul class="directory-list">
+                <li><a href="careers.html">Career Opportunities</a></li>
+                <li><a href="appllicationform.html">Join the Team</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="faq.html">Frequently Asked Questions</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="community-callout">
+            <h3>A Legacy of Giving</h3>
+            <p>Every piece of jewelry from Wehman’s contributes to financial assistance programs within the Burlington area. 
+              We believe in beauty that builds a better community.</p>
+        </div>
+
+    </main>
+
+    <footer>
+        2026 Wehman’s Jewelry LLC | Built with a dream in Burlington, Vermont.
+    </footer>
+
+</body>
+</html>
