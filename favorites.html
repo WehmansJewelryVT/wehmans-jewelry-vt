@@ -1,1 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --wehman-gold: #c5a059;
+            --wehman-slate: #2d2d2d;
+            --soft-rose: #fff9f8;
+            --white: #ffffff;
+            --light-gray: #f2f2f2;
+        }
 
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: var(--white);
+            color: var(--wehman-slate);
+            margin: 0;
+            padding: 0;
+        }
+
+        .wishlist-header {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: var(--soft-rose);
+        }
+
+        .wishlist-header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .wishlist-header p {
+            font-family: 'Helvetica Neue', Helvetica, sans-serif;
+            font-style: italic;
+            color: #777;
+            margin-top: 10px;
+        }
+
+        .wishlist-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .wishlist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .wishlist-item {
+            border: 1px solid var(--light-gray);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .wishlist-item:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        .item-image {
+            width: 100%;
+            height: 300px;
+            background-color: #f9f9f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem; /* Placeholder for actual images */
+        }
+
+        .item-details {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .item-name {
+            font-size: 1.2rem;
+            margin: 0 0 10px 0;
+            font-weight: bold;
+        }
+
+        .item-price {
+            font-family: 'Helvetica Neue', sans-serif;
+            color: var(--wehman-gold);
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .impact-hint {
+            font-family: 'Helvetica Neue', sans-serif;
+            font-size: 0.75rem;
+            color: #999;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 12px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            cursor: pointer;
+            border: none;
+            transition: 0.3s;
+        }
+
+        .btn-cart {
+            background-color: var(--wehman-slate);
+            color: white;
+        }
+
+        .btn-cart:hover {
+            background-color: var(--wehman-gold);
+        }
+
+        .btn-remove {
+            background-color: transparent;
+            color: #ccc;
+            border: 1px solid #eee;
+        }
+
+        .btn-remove:hover {
+            color: #ff4d4d;
+            border-color: #ff4d4d;
+        }
+
+        .share-wishlist {
+            margin-top: 60px;
+            padding: 30px;
+            border-top: 1px solid var(--light-gray);
+            text-align: center;
+        }
+
+        .share-wishlist h3 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .share-btn {
+            background: none;
+            border: 1px solid var(--wehman-slate);
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+
+        .share-btn:hover {
+            background: var(--wehman-slate);
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .wishlist-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="wishlist-header">
+        <h1>The Wishlist</h1>
+        <p>Pieces you love, for the causes you care about.</p>
+    </header>
+
+    <div class="wishlist-container">
+        <div class="wishlist-grid">
+            
+            <div class="wishlist-item">
+                <div class="item-image">💍</div>
+                <div class="item-details">
+                    <p class="item-name">Celestial Diamond Band</p>
+                    <p class="item-price">$1,850.00</p>
+                    <p class="impact-hint">Provides ~40 local meals</p>
+                    <div class="actions">
+                        <button class="btn btn-cart">Add to Bag</button>
+                        <button class="btn btn-remove">✕</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wishlist-item">
+                <div class="item-image">✨</div>
+                <div class="item-details">
+                    <p class="item-name">Silver Morning Dew Studs</p>
+                    <p class="item-price">$45.00</p>
+                    <p class="impact-hint">Supports community pantry</p>
+                    <div class="actions">
+                        <button class="btn btn-cart">Add to Bag</button>
+                        <button class="btn btn-remove">✕</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wishlist-item">
+                <div class="item-image">📿</div>
+                <div class="item-details">
+                    <p class="item-name">Heritage Gold Locket</p>
+                    <p class="item-price">$620.00</p>
+                    <p class="impact-hint">Supports local shelter bed</p>
+                    <div class="actions">
+                        <button class="btn btn-cart">Add to Bag</button>
+                        <button class="btn btn-remove">✕</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <section class="share-wishlist">
+            <h3>Drop a Hint</h3>
+            <p style="font-family: 'Helvetica Neue', sans-serif; font-size: 0.9rem; color: #666;">
+                Share your curated collection with a loved one.
+            </p>
+            <button class="share-btn">Email Wishlist</button>
+            <button class="share-btn">Copy Unique Link</button>
+        </section>
+    </div>
+
+</body>
+</html>
