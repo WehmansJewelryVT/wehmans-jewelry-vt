@@ -140,6 +140,101 @@
             cursor: pointer;
             border-radius: 4px;
         }
+        :root {
+            --wehman-gold: #b89552;
+            --wehman-slate: #1a1a1a;
+            --soft-bg: #fdfbf8;
+        }
+
+        body {
+            font-family: 'Garamond', serif;
+            background-color: var(--soft-bg);
+            padding: 40px 20px;
+            color: var(--wehman-slate);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .faq-header h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+        }
+
+        .faq-header p {
+            font-style: italic;
+            color: #666;
+        }
+
+        .faq-category {
+            margin-top: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--wehman-gold);
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        /* Accordion Logic */
+        .faq-item {
+            border-bottom: 1px solid #eee;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 20px 0;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 1.1rem;
+            font-family: 'Garamond', serif;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            outline: none;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--wehman-gold);
+        }
+
+        .faq-question.active::after {
+            content: '−';
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            color: #555;
+            line-height: 1.6;
+            font-family: sans-serif;
+            font-size: 0.95rem;
+        }
+
+        .faq-answer p {
+            padding-bottom: 20px;
+            margin: 0;
+        }
+
+        .impact-highlight {
+            color: #2d6a4f;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -150,7 +245,7 @@
     <div class="chat-header">
         <div class="online-dot"></div>
         <div>
-            <h3>Wehman's Assistant</h3>
+            <h3>Wehman's Jewelry Assistant</h3>
             <span style="font-size: 0.7rem; color: var(--gold);">AI Boutique Concierge</span>
         </div>
     </div>
@@ -200,13 +295,16 @@
             aiDiv.className = 'message ai-message';
             
             if (query.includes('charity') || query.includes('give') || query.includes('profit')) {
-                aiDiv.textContent = "Great question! Wehman's gives 15% of all profits to local homelessness and food security programs. Your purchase directly helps our neighbors shine!";
+                aiDiv.textContent = "Great question! Wehman's gives 15% of all profits to local homelessness and food security programs. 
+                    Your purchase directly helps our neighbors shine!";
             } else if (query.includes('gold') || query.includes('material')) {
-                aiDiv.textContent = "We use ethically sourced metals, including 14k gold and recycled sterling silver. Our ethical sourcing page has all the details!";
+                aiDiv.textContent = "We use ethically sourced metals, including 14k gold and recycled sterling silver. 
+                    Our ethical sourcing page has all the details!";
             } else if (query.includes('shipping')) {
                 aiDiv.textContent = "We offer complimentary shipping on all orders over $100!";
             } else {
-                aiDiv.textContent = "That's a wonderful question. I'm still learning, but I can certainly help you browse our collections or connect you with a human expert!";
+                aiDiv.textContent = "That's a wonderful question. I'm still learning, but I can certainly help you browse our collections
+                    or connect you with a human expert!";
             }
             
             body.appendChild(aiDiv);
@@ -214,6 +312,70 @@
         }, 800);
     }
 </script>
+<div class="faq-container">
+    <div class="faq-header">
+        <h1>Boutique FAQ</h1>
+        <p>Expertise, Ethics, and Our 15% Promise</p>
+    </div>
 
-</body>
-</html>
+    <div class="faq-category">Our 15% Mission</div>
+    
+    <div class="faq-item">
+        <button class="faq-question">How does the 15% donation work?</button>
+        <div class="faq-answer">
+            <p>Every purchase at Wehman’s makes an impact. We take <span class="impact-highlight">15% of our net profits</span> and distribute them monthly to local charities focusing on homelessness, food insecurity, and poverty relief.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">Does the donation make the jewelry more expensive?</button>
+        <div class="faq-answer">
+            <p>Not at all. We believe giving is a cost of doing business, not an extra fee for our customers. Our prices remain competitive because we prioritize community over maximum profit.</p>
+        </div>
+    </div>
+
+    <div class="faq-category">Our Collection</div>
+
+    <div class="faq-item">
+        <button class="faq-question">Do you have options for all budgets?</button>
+        <div class="faq-answer">
+            <p>Absolutely. We believe luxury should be accessible. Our <strong>Everyday Essentials</strong> line starts as low as $45, while our <strong>Heirloom Collection</strong> features investment-grade gemstones and fine gold.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">Is your jewelry ethically sourced?</button>
+        <div class="faq-answer">
+            <p>Ethical beauty is our standard. We work exclusively with workshops that provide living wages and use conflict-free stones 
+                along with certified recycled metals.</p>
+        </div>
+    </div>
+
+    <div class="faq-category">Service & Shipping</div>
+
+    <div class="faq-item">
+        <button class="faq-question">What is your shipping & return policy?</button>
+        <div class="faq-answer">
+            <p>We offer complimentary standard shipping on all orders. If you don't love your piece, you may return it within 30 days 
+                for a full refund, provided it is in original condition.</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    // Script to handle the accordion opening/closing
+    const acc = document.getElementsByClassName("faq-question");
+    
+    for (let i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            const panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+</script>
