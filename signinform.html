@@ -1,1 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --accent-gold: #b89552;
+            --deep-slate: #1a1a1a;
+            --soft-white: #ffffff;
+            --muted-gray: #f8f8f8;
+        }
 
+        body {
+            background-color: var(--muted-gray);
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .signin-box {
+            background: var(--soft-white);
+            width: 100%;
+            max-width: 400px;
+            padding: 50px 40px;
+            border-radius: 2px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .logo {
+            font-family: 'Times New Roman', serif;
+            font-size: 2.2rem;
+            letter-spacing: 4px;
+            color: var(--deep-slate);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .welcome-back {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 35px;
+            letter-spacing: 1px;
+        }
+
+        .input-group {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--deep-slate);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 0;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+            outline: none;
+        }
+
+        .input-group input:focus {
+            border-bottom: 1.5px solid var(--accent-gold);
+        }
+
+        .forgot-pass {
+            display: block;
+            text-align: right;
+            font-size: 0.8rem;
+            color: var(--accent-gold);
+            text-decoration: none;
+            margin-top: -10px;
+            margin-bottom: 30px;
+        }
+
+        .btn-signin {
+            width: 100%;
+            background-color: var(--deep-slate);
+            color: white;
+            padding: 16px;
+            border: none;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-signin:hover {
+            background-color: var(--accent-gold);
+        }
+
+        .create-account {
+            margin-top: 25px;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .create-account a {
+            color: var(--deep-slate);
+            font-weight: bold;
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent-gold);
+        }
+
+        .impact-footer {
+            margin-top: 40px;
+            font-size: 0.75rem;
+            color: #aaa;
+            line-height: 1.5;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="signin-box">
+    <div class="logo">Wehman's Jewelry LLC</div>
+    <div class="welcome-back">Welcome Back!</div>
+
+    <form action="/login" method="POST">
+        <div class="input-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <a href="#" class="forgot-pass">Forgot Password?</a>
+
+        <button type="submit" class="btn-signin">Sign In</button>
+    </form>
+
+    <div class="create-account">
+        New to Wehman's? <a href="signupfrom.html">Create an Account</a>
+    </div>
+
+    <div class="impact-footer">
+        Every purchase you make supports our mission to end local homelessness and hunger. 
+        <strong>15% of profits go directly to local chairities.</strong>
+    </div>
+</div>
+
+</body>
+</html>
